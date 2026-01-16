@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh ;
+    background-color: ;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.login-container{
+    background-color: lavenderblush;
+    padding: 30px;
+    width: 320px;
+    border-radius: 8px;
+    margin: 12px;
+    
+    
+}
+
+.login-container2{
+    background-color: lavenderblush;
+    padding: 30px;
+    width: 320px;
+    border-radius: 8px;
+    margin: 12px;
+    align-items: center;
+    
+}
+
+.login-container h2{
+    text-align:center;
+    margin-bottom: 20px;
+
+}
+
+.input-group{
+    margin-bottom:15px;
+    border-style: initial;
+
+}
+
+.input-group label{
+    display: block;
+    margin: bottom 5px;
+    font-weight: bold;
+}
+
+.input-group select,input{
+    width:100%;
+    padding:10px 12px;
+    border-radius:6px;
+    border: 1px solid slategrey;
+    background:white;
+    font-size: 0.95rem;
+}
+
+button{ 
+    width:100%;
+    padding:10px;
+    background-color: #007bff;
+    color:white;
+    border:none;
+    border-radius: 4px;
+    font-size:16px;
+    cursor:pointer;
+    transition-duration: 0.4s;
+    
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
+.input-group2 label{
+    display: block;
+    margin: bottom 5px;
+    font-weight: bold;
+}
+
+.input-group2 input{
+    width:200%;
+    height:200%;
+    padding:10px;
+    border-radius:4px;
+    border: 1px solid slategrey;
+
+
+}
+
+table{
+    table-layout: fixed;
+    padding:6px;
+    margin: 20px;
+    border-radius:3px;
+    word-spacing: 6px;
+    align-items: center;
+    
+    
+}
+
+th{
+    background-color: goldenrod;
+    font-size: medium;
+}
+
+tr{
+    background-color: darkgrey;
+}

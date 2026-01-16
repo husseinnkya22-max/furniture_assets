@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='new-entry.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new entry</title>
+</head>
+<body>
+    <header id="top-header">
+        <div class="logo-container">
+            <img src="school logo.png" alt="logo">
+        </div>
+        <div class="header-contents">
+            <div class="searchbox-container">
+                <input type="search" placeholder="🔍... furniture number or owner">
+            </div>
+            <div class="header-links-container">
+                <button id="login-button" type="button" onclick="showLoginContainer()">
+                    🔑login
+                </button>
+                <button class="notification-button">
+                    🔔notifications
+                </button>
+                <button class="settings-button">
+                    ⚙️settings
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <aside class="side-nav">
+                <div class="top-buttons-container">
+                    <div class="buttons-container">
+                        <a id="home" href="/new">
+                           🏚️
+                        </a>
+                        <button id="gohome" class="home-button">home</button>
+                    </div>
+                    <div class="buttons-container">
+                        <a id="newEntry" href="/new">
+                            ➕
+                        </a>
+                        <button id="newEntry" class="new-entry-button">New entry</button>
+                    </div>
+                    <div class="buttons-container">
+                        <a id="accessRecord" href="/access">
+                            🔎
+                        </a>
+                        <button id="accessRecord" class="access-record-button">Access record</button>
+                    </div>
+                    <div class="buttons-container">
+                        <a id="updateRecord" href="/new">
+                            🆕
+                        </a>
+                        <button id="updateRecord" class="update-record-button">Update record</button>
+                    </div>
+                    <div class="buttons-container">
+                        <a id="deleteRecord" href="/delete">
+                            ❌
+                        </a>
+                        <button id="deleteRecord" class="delete-record-button">Delete record</button>
+                    </div>
+                </div>
+                <div class="bottom-buttons-container">
+                    <div class="buttons-container">
+                        <a id="" href="">
+                            🧒
+                        </a>
+                        <button id="AccountInfo" class="account-info-button">Account</button>
+                    </div>
+                    <div class="buttons-container">
+                        <a href="/logout">
+                            📤
+                        </a>
+                        <button id="logout" class="logout-button">logout</button>
+                    </div>
+                </div>
+            </aside>
+            <div class="main-right">
+               
+                <div class="new-entry-form">
+                    <h3>Create new data entry</h3>
+                        <form method="POST" action="/new">
+                            <div class="input-group">
+                                <lable><strong>username</strong> </lable><br>
+                                <input type="text" name='uname' required><br>
+                             </div>
+                            <div class="input-group">
+                                <label>user Sj number</label>
+                                 <input type="text" name="usersj"  required><br>
+                             </div>
+                            <div class="input-group">
+                                <label>Desk number</label>
+                                <input type="text" height="12" width="30" name="deskno" required><br>
+                            </div>
+                            <div class="input-group">
+                                <label>Chair number</label>
+                                <input type="text" name="chairno" required><br><br>
+                            </div>
+
+                            <label>Select level</label>
+                            <select name="level">
+                                <option value="form1">Form 1</option>
+                                <option value="form2">Form 2</option>
+                                <option value="form3">Form 3</option>
+                                <option value="form4">Form 4</option>
+                                <option value="form5">Form 5</option>
+                                <option value="form6">Form 6</option>
+                            </select>
+                            <select name="stream"> stream
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                                <option value="G">G</option>
+                                <option value="H">H</option>
+                            </select><br><br>
+             
+                        <button id="new-entry-save">Save</button><br>
+                        </form>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

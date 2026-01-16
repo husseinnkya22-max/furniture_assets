@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+
+  
+            <div class="main-right">
+                <div id="login-container">
+                    <h2>Login</h2>
+                    <form method="POST">
+                        <div class="input-group">
+                            <label for="username">Username</label><br>
+                            <input type="text" name="username" placeholder="Enter username" required>
+                        </div><br>
+                        <div class="input-group">
+                            <label for="password">password</label><br>
+                            <input type="password" name="password" placeholder="🔒Enter password" required>
+                        </div><br>
+                        <button id="login-submit">login</button>
+                    </form>
+                </div>
+            </div>
+
+</body>
+</html>

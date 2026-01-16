@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+body{
+    background-color: wheat;
+}
+
+/* page layout */
+#main{
+    width: 99.99%;
+    max-width: 1920px;
+    margin: 1px auto;
+}
+
+/* right side grid */
+.main-right{
+    position: fixed;
+    width: calc(100vw - 241px);
+    margin-left: 241px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* right side Access record output */
+.access-record-output{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    box-sizing: border-box;
+}
+
+#access-record-table{
+    width: 95%;
+    border-spacing: 1px;
+}
+#access-record-table th{
+    padding: 3px 5px;
+    background-color: burlywood;
+}
+#access-record-table td{
+    padding: 3px 5px;
+    background-color: burlywood;
+    opacity: 70%;
+}
+
+/* right side Access record form */
+.access-record-form{
+    height: 100%;
+    background-color: burlywood;
+    position: sticky;
+    padding: 20px;
+    align-items: center;
+}
+.access-record-form h3{
+    text-align:center;
+    margin-bottom: 20px;
+}
+.access-record-form select{
+    background-color: wheat;
+}
+.access-record-form select:hover{
+    background-color: burlywood;
+}
+.input-group{
+    margin-bottom:10px;
+    box-sizing: border-box;
+}
+
+.input-group label{
+    font-weight: bold;
+}
+
+.input-group input{
+    width: 100%;
+    padding:10px;
+    border-radius:6px;
+    border: 1px solid slategrey;
+    background:wheat;
+    font-size: 0.95rem;
+}
+#access-record-button{ 
+    width:100%;
+    padding:10px;
+    background-color: #2C3E50;
+    color:wheat;
+    border:none;
+    border-radius: 4px;
+    font-size:16px;
+    cursor:pointer;
+    transition-duration: 0.4s;
+    
+}
+
+@media (max-width: 990px) {
+    .side-nav{
+        width: 50px;
+    }
+    .buttons-container button{
+        visibility: hidden;
+    }
+    .main-right {
+        margin-left: 51px;
+        width: calc(100vw - 51px);
+        grid-template-columns: 250px;
+    }
+    .new-entry-output {
+        visibility: hidden;
+    }
+    .new-entry-form{
+        position: sticky;
+        bottom: 0;
+        padding: 40px;
+    }
+}

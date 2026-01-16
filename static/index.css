@@ -1,0 +1,242 @@
+:root{
+  --nav-icon-size: 50px;
+  --nav-icon-color: #2C3E50;
+  --nav-icon-hover: burlywood;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+body{
+    background-color: wheat;
+}
+
+/* header style */
+#top-header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: burlywood;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+.logo-container{
+    width: 230px;
+    height: 80px;
+}
+.logo-container img{
+    width: 100%;
+    height: 100%;
+}
+.header-contents{
+    margin: 10px;
+    height: 80%;
+    width: 700px;
+    gap: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.searchbox-container{
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: inherit;
+    align-items: center;
+    box-sizing: border-box;
+}
+.searchbox-container input{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: wheat;
+    border: 1px wheat solid;
+    border-radius: 5px;
+}
+.header-links-container{
+    height: 40px;
+    gap: 3px;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.header-links-container button{
+    color: #2C3E50;
+    background-color: wheat;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+.header-links-container button:hover{
+    color: wheat;
+    background-color: #2C3E50;
+}
+/* end of header style */
+
+/* page layout */
+#main{
+    width: 99.99%;
+    max-width: 1920px;
+    margin: 1px auto;
+}
+.main-right{
+    margin-left: 241px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* side navigation container */
+.side-nav{
+    position: fixed;
+    height: 100vh;
+    width: 240px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.top-buttons-container{
+    width: 100%;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.bottom-buttons-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: sticky;
+    bottom: 0;
+    box-sizing: border-box;
+}
+.buttons-container{
+    width: 100%;
+    height: 50px;
+    display: inline-flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.buttons-container a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--nav-icon-size, 50px);
+    height: var(--nav-icon-size, 50px);
+    color: var(--nav-icon-color, #2C3E50);
+    text-decoration: none;
+}
+.buttons-container a svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+/*fill: currentColor;   /* for filled icons */
+}
+.buttons-container a:hover {
+    color: var(--nav-icon-hover, burlywood);
+    background-color: #2C3E50;
+}
+
+.top-buttons-container button, .bottom-buttons-container button{
+    width: 80%;
+    height: 100%;
+    font-size: medium;
+    font-style: bold;
+    color: #2C3E50;
+    background-color: burlywood;
+    margin: auto;
+    border: none;
+    padding: auto;
+}
+.top-buttons-container button:hover, .bottom-buttons-container button:hover{
+    color: burlywood;
+    background-color: #2C3E50;
+    cursor: pointer;
+}
+
+/* right side container */
+#login-container{
+    
+    background-color: burlywood;
+    padding: 50px;
+    width: 400px;
+    border-radius: 8px;
+    align-items: center;
+    box-sizing: border-box 
+}
+
+#login-container h2{
+    text-align:center;
+    margin: 10px;
+
+}
+
+.input-group{
+    width: 100%;
+
+}
+
+.input-group label{
+    display: block;
+    margin: bottom 5px;
+    font-weight: bold;
+}
+
+.input-group input{
+    background-color: wheat;
+    width: 100%;
+    padding:10px 12px;
+    border-radius:6px;
+    border: none;
+    font-size: 0.95rem;
+}
+
+#login-submit{ 
+    width:100%;
+    padding:10px;
+    background-color: #2C3E50;
+    color:wheat;
+    border:none;
+    border-radius: 4px;
+    font-size:medium;
+
+    transition-duration: 0.4s;
+    
+}
+
+#login-submit:hover{
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 990px) {
+    .side-nav{
+        width: 50px;
+    }
+    .buttons-container a{
+        width: 100%;
+    }
+    .buttons-container button{
+        visibility: hidden;
+    }
+    .main-right{
+        margin-left: 51px;
+    }
+}
