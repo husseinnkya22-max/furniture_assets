@@ -5,7 +5,7 @@ import os
 
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
-    "postgresql://postgres.wegsxzwhrdhqsvkuqweg:codexhusseinmartinnkya@aws-1-eu-central-1.pooler.supabase.com:5432/postgres",
+    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
 )
 
 
@@ -178,7 +178,7 @@ def delete_page():
 
 @app.route('/delete_selected', methods=['POST'])
 def delete_selected():
-    usernames = request.form.getlist('delete_ids')  # FIXED
+    usernames = request.form.getlist('delete_ids') 
 
     if usernames:
         sql = "DELETE FROM furndb WHERE username = ANY(%s)"
@@ -189,7 +189,7 @@ def delete_selected():
         except Exception as e:
             print(e)
 
-    return redirect(url_for('delete_page'))  # FIXED
+    return redirect(url_for('delete_page'))
 
 
 
@@ -201,4 +201,5 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__=='__main__':
+
     app.run(debug=True)
